@@ -2,6 +2,10 @@ dist: trusty
 sudo: false
 language: cpp
 
+install:
+  - sudo apt-get install libboost-all-dev
+
 script:
   - cmake .
   - cmake --build . -- -j2
+  - ctest
