@@ -26,13 +26,13 @@ else()
 endif()
 
 file(GLOB INCLUDES "include/*.h")
-add_executable(tests 
+add_executable(ap_tests 
     tests/AccumulatorTests.cpp  
     tests/CircularBufferTest.cpp 
     tests/AccumulatorPlusTests.cpp
     tests/catch.hpp 
     ${INCLUDES} )
-target_include_directories(tests PUBLIC include)
+target_include_directories(ap_tests PUBLIC include)
 
 enable_testing()
-add_test(tests "${CMAKE_BINARY_DIR}/tests")
+add_test(ap_tests "${CMAKE_BINARY_DIR}/ap_tests")
