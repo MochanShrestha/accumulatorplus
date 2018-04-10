@@ -13,6 +13,9 @@ install:
       { travis_retry wget -O - ${BOOST_URL} | tar --strip-components=1 -xz -C ${BOOST_DIR}; } || exit 1
     CMAKE_OPTIONS+=" -DBOOST_ROOT=${BOOST_DIR}"
 
+before_script:
+  - cd "${TRAVIS_BUILD_DIR}"
+
 script:
   - cmake .
   - cmake --build . -- -j2
