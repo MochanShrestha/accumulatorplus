@@ -10,8 +10,6 @@ endif ()
 # Use in case way too many errors pours out that are long template errors
 #add_definitions(-Wfatal-errors)
 
-set(CMAKE_CXX_STANDARD 11)
-
 if (MSVC)
     add_compile_options(/W4)
 else()
@@ -33,6 +31,7 @@ add_executable(ap_tests
     tests/catch.hpp 
     ${INCLUDES} )
 target_include_directories(ap_tests PUBLIC include)
+set_target_properties(ap_tests PROPERTIES CXX_STANDARD 11)
 
 enable_testing()
 add_test(ap_tests "${CMAKE_BINARY_DIR}/ap_tests")
