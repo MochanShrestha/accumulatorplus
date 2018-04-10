@@ -17,6 +17,6 @@ before_script:
   - cd "${TRAVIS_BUILD_DIR}"
 
 script:
-  - cmake .
+  - cmake . ${CMAKE_OPTIONS}
   - cmake --build . -- -j2
   - ctest
