@@ -60,7 +60,7 @@ namespace boost
                 }
 
                 template<typename Args>
-                result_type result(Args const & args) const
+                result_type result(Args const & /*args*/) const
                 {
                     auto r = sum_;
                     r.first /= size_;

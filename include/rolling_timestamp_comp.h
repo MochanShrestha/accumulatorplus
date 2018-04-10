@@ -34,7 +34,7 @@ namespace boost
                 typedef Sample result_type;
 
                 template<typename Args>
-                rolling_timestamp_comp_impl(Args const &args)
+                rolling_timestamp_comp_impl(Args const &/*args*/)
                 {
                 }
 

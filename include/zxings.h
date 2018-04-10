@@ -33,7 +33,7 @@ namespace boost
 
                 template<typename Args>
                 zxings_impl(Args const &args)
-                    : prev_val_(args[sample | Sample()]), zxings_(0u)
+                    : zxings_(0u), prev_val_(args[sample | Sample()])
                 {
                 }
 

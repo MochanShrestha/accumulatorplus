@@ -7,9 +7,16 @@ if (POLICY CMP0025)
   cmake_policy(SET CMP0025 NEW)
 endif ()
 
+# Use in case way too many errors pours out that are long template errors
 #add_definitions(-Wfatal-errors)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
+
+if (MSVC)
+    add_compile_options(/W4)
+else()
+    add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
 
 find_package(Boost)
 IF (Boost_FOUND)

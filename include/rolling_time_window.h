@@ -74,7 +74,7 @@ namespace boost
                     this->buffer_.insert_only(data, timestamp);
                 }
 
-                unsigned int get_older(double timestamp) const
+                unsigned int get_older(double /*timestamp*/) const
                 {
                     //return this->buffer_.get_older(timestamp);
                     return n_older;
