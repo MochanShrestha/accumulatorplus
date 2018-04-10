@@ -3,6 +3,7 @@ sudo: false
 language: cpp
 
 install:
+  - sudo apt-cache search libboost
   - sudo apt-get install libboost-all-dev
 
 script:
